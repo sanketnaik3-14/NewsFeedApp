@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/headline_image"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        tools:src="@mipmap/ic_launcher"
+        />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_alignBottom="@id/headline_image"
+            android:background="@drawable/gradient"/>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:fontFamily="sans-serif"
+            android:elegantTextHeight="true"
+            android:layout_alignBottom="@id/headline_image"
+            android:textSize="20sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            tools:text="India won the worldcup,Report."/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/trailText"
+        android:layout_width="match_parent"
+        android:background="#303030"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:elegantTextHeight="true"
+        android:fontFamily="sans-serif"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="14sp"
+        android:textColor="#B2FFFFFF"
+        tools:text="India defeated Australia by 4 wickets to win the workdcup, Report."/>
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <TextView
+            android:id="@+id/publication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="#303030"
+            android:paddingLeft="8dp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="8dp"
+            android:layout_weight="1"
+            android:elegantTextHeight="true"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            tools:text="Theguardian"/>
+
+        <TextView
+            android:id="@+id/tone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:fontFamily="sans-serif"
+            android:background="#303030"
+            android:paddingLeft="8dp"
+            android:elegantTextHeight="true"
+            android:paddingBottom="8dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            tools:text="News"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:fontFamily="sans-serif"
+            android:background="#303030"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:elegantTextHeight="true"
+            android:paddingBottom="8dp"
+            tools:text="27/3/2017"
+            android:textColor="@color/colorPrimary"/>
+        
+        
+    </LinearLayout>
+
+
+</LinearLayout>

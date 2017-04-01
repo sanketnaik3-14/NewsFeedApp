@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">NewsFeedApp</string>
+
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
+    <string name="technology">Technology</string>
+    <string name="science">Science</string>
+
+    <string name="all">All</string>
+    <string name="aeronautics">Aeronautics</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="anthropology">Anthropology</string>
+    <string name="archaeology">Archaeology</string>
+    <string name="astronomy">Astronomy</string>
+    <string name="biochemistry">Biochemistry</string>
+    <string name="biology">Biology</string>
+    <string name="britishsciencefestival">British Science Festival</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="energy">Energy</string>
+    <string name="foodscience">Food Science</string>
+    <string name="genetics">Genetics</string>
+    <string name="geography">Geography</string>
+    <string name="geology">Geology</string>
+    <string name="materialsscience">Material Science</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="medicalresearch">Medical Research</string>
+    <string name="microbiology">Microbiology</string>
+    <string name="nanotechnology">Nano Technology</string>
+    <string name="nobelprizes">Nobel Prizes</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="physics">Physics</string>
+    <string name="psychology">Psychology</string>
+    <string name="scienceblog">Science Blog</string>
+    <string name="space">Space</string>
+    <string name="weaponstechnology">Weapons Tech</string>
+    <string name="zoology">Zoology</string>
+
+    <string name="technologyall">All Technology</string>
+    <string name="mobiles">Mobiles</string>
+    <string name="laptops">Laptops</string>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/permanent"
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:id="@+id/tech"
+            android:title="@string/technology"
+            android:checked="true"
+            app:actionLayout="@layout/technology_switch" />
+        <item
+            android:id="@+id/sci"
+            android:title="@string/science"
+            app:actionLayout="@layout/science_switch" />
+    </group>
+
+    <group android:id="@+id/temp1"
+        android:checkableBehavior="single"
+        android:visible="true">
+
+    <item
+        android:id="@+id/science"
+        android:title="Science Topics"
+        app:itemTextColor="#89000000">
+
+        <menu>
+            <group
+                android:id="@+id/temp4"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/allScience"
+                    android:title="All Science" />
+                <item
+                    android:id="@+id/aeronautics"
+                    android:title="@string/aeronautics" />
+                <item
+                    android:id="@+id/agriculture"
+                    android:title="@string/agriculture" />
+                <item
+                    android:id="@+id/anthropology"
+                    android:title="@string/anthropology" />
+                <item
+                    android:id="@+id/archaeology"
+                    android:title="@string/archaeology" />
+                <item
+                    android:id="@+id/astronomy"
+                    android:title="@string/astronomy" />
+                <item
+                    android:id="@+id/biochemistry"
+                    android:title="@string/biochemistry" />
+                <item
+                    android:id="@+id/biology"
+                    android:title="@string/biology" />
+                <item
+                    android:id="@+id/britishsciencefestival"
+                    android:title="@string/britishsciencefestival" />
+                <item
+                    android:id="@+id/chemistry"
+                    android:title="@string/chemistry" />
+                <item
+                    android:id="@+id/energy"
+                    android:title="@string/energy" />
+                <item
+                    android:id="@+id/foodscience"
+                    android:title="@string/foodscience" />
+                <item
+                    android:id="@+id/genetics"
+                    android:title="@string/genetics" />
+                <item
+                    android:id="@+id/geography"
+                    android:title="@string/geography" />
+                <item
+                    android:id="@+id/geology"
+                    android:title="@string/geology" />
+                <item
+                    android:id="@+id/materialsscience"
+                    android:title="@string/materialsscience" />
+                <item
+                    android:id="@+id/mathematics"
+                    android:title="@string/mathematics" />
+                <item
+                    android:id="@+id/medicalresearch"
+                    android:title="@string/medicalresearch" />
+                <item
+                    android:id="@+id/microbiology"
+                    android:title="@string/microbiology" />
+                <item
+                    android:id="@+id/nanotechnology"
+                    android:title="@string/nanotechnology" />
+                <item
+                    android:id="@+id/nobelprizes"
+                    android:title="@string/nobelprizes" />
+                <item
+                    android:id="@+id/nutrition"
+                    android:title="@string/nutrition" />
+                <item
+                    android:id="@+id/physics"
+                    android:title="@string/physics" />
+                <item
+                    android:id="@+id/psychology"
+                    android:title="@string/psychology" />
+                <item
+                    android:id="@+id/scienceblog"
+                    android:title="@string/scienceblog" />
+                <item
+                    android:id="@+id/space"
+                    android:title="@string/space" />
+                <item
+                    android:id="@+id/weaponstechnology"
+                    android:title="@string/weaponstechnology" />
+                <item
+                    android:id="@+id/zoology"
+                    android:title="@string/zoology" />
+
+            </group>
+        </menu>
+    </item>
+    </group>
+
+    <group android:id="@+id/temp2"
+        android:checkableBehavior="single"
+        android:visible="false">
+
+        <item
+            android:id="@+id/technology"
+            android:title="Tech Topics"
+            app:itemTextColor="#89000000">
+
+            <menu>
+                <group
+                    android:id="@+id/temp3"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/technologyall"
+                        android:title="@string/technologyall"/>
+
+                <item
+                    android:id="@+id/mobiles"
+                    android:title="@string/mobiles" />
+                <item
+                    android:id="@+id/laptops"
+                    android:title="@string/laptops" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>
