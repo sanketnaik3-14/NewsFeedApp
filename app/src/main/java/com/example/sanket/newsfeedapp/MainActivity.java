@@ -528,13 +528,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoadFinished(Loader<List<News>> loader, List<News> data) {
 
         adapter.clear();
-        adapter.notifyDataSetInvalidated();
-        adapter.notifyDataSetChanged();
         if(data != null && !data.isEmpty()) {
-
             adapter.addAll(data);
-            
-
         }
         listView.setVisibility(View.VISIBLE);
     }
