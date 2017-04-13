@@ -1,11 +1,14 @@
 package com.example.sanket.newsfeedapp;
 
-import android.content.AsyncTaskLoader;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.http.HttpResponseCache;
+import android.os.Build;
+import android.support.v4.content.AsyncTaskLoader;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -24,17 +27,23 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by sanket on 29/03/17.
  */
 
 public class NewsLoader extends AsyncTaskLoader<List<News>> {
 
+
+    static boolean mConnect;
+    static boolean mRefresh;
     String link = "";
-    public NewsLoader(Context context,String url1)
+    public NewsLoader(Context context,String url1,boolean refresh,boolean connect)
     {
         super(context);
         link = url1;
+        mRefresh = refresh;
+        mConnect = connect;
     }
 
     @Override
@@ -94,7 +103,35 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
                     String thumbnail = fields.getString("thumbnail");
                         try {
                             URL url1 = new URL(thumbnail);
-                            bmp = BitmapFactory.decodeStream(url1.openConnection().getInputStream());
+                            HttpURLConnection conn = (HttpURLConnection)url1.openConnection();
+                            int maxStale = 60 * 60 * 24 * 28; // tolerate 4-weeks stale
+
+                            if(mRefresh)
+                            {
+                                conn.addRequestProperty("Cache-Control","max-age=0");
+                                flushcache();
+                            }
+                            else
+                            {
+                                conn.addRequestProperty("Cache-Control", "max-stale=" + maxStale);
+                                flushcache();
+                            }
+                            conn.setUseCaches(true);
+                            InputStream stream = conn.getInputStream();
+                            bmp = BitmapFactory.decodeStream(stream);
+
+                            HttpResponseCache cache = HttpResponseCache.getInstalled();
+                            if (cache != null) {
+                                String cacheInfo = "Request count: "
+                                        + cache.getRequestCount() + ", hit count "
+                                        + cache.getHitCount() + ", network count "
+                                        + cache.getNetworkCount() + "   size = "
+                                        + cache.size() + " <-----------------";
+                                Log.i("NewsLoader", cacheInfo);
+
+                            }
+
+                            stream.close();
 
                         } catch (MalformedURLException e) {
                             Log.i("BooksLoader", "URL empty or bitmap not formed");
@@ -161,6 +198,19 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
         try
         {
             connection = (HttpURLConnection) url.openConnection();
+            int maxStale = 60 * 60 * 24 * 28; // tolerate 4-weeks stale
+
+            if(mRefresh)
+            {
+                connection.addRequestProperty("Cache-Control","max-age=0");
+                flushcache();
+            }
+            else
+            {
+                connection.addRequestProperty("Cache-Control", "max-stale=" + maxStale);
+                flushcache();
+            }
+            connection.setUseCaches(true);
             connection.setReadTimeout(10000);
             connection.setConnectTimeout(15000);
             connection.setRequestMethod("GET");
@@ -175,12 +225,32 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
             {
                 Log.e("BooksLoader","Error response code :" + connection.getResponseCode()+connection.getResponseMessage());
             }
+
+            HttpResponseCache cache = HttpResponseCache.getInstalled();
+            if (cache != null) {
+                String cacheInfo = "Request count: "
+                        + cache.getRequestCount() + ", hit count "
+                        + cache.getHitCount() + ", network count "
+                        + cache.getNetworkCount() + "   size = "
+                        + cache.size() + " <-----------------";
+                Log.i("NewsLoader", cacheInfo);
+
+            }
         }catch (IOException e)
         {
             Log.e("BooksLoader","Problem retrieving string" ,e);
         }
 
         return jsonResponse;
+    }
+
+    public static void flushcache()
+    {
+        HttpResponseCache cache = HttpResponseCache.getInstalled();
+        if (cache != null)
+        {
+            cache.flush();
+        }
     }
 
     public static String readFromStream(InputStream is) throws IOException

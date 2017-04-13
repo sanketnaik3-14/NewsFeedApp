@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/searchsettings">
+
+    <ListPreference
+        android:defaultValue="@string/settings_search_order_by_default"
+        android:entries="@array/settings_search_order_by_labels"
+        android:entryValues="@array/settings_search_order_by_values"
+        android:key="@string/settings_search_order_by_key"
+        android:title="@string/settings_search_order_by_label" />
+
+    <PreferenceCategory
+        android:title="@string/sortbysettings">
+
+        <ListPreference
+            android:defaultValue="@string/settings_search_sort_by_default"
+            android:entries="@array/settings_search_sort_by_labels"
+            android:entryValues="@array/settings_search_sort_by_values"
+            android:key="@string/settings_search_sort_by_key"
+            android:title="@string/settings_search_sort_by_label" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

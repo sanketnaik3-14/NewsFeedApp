@@ -39,15 +39,14 @@
             android:textColor="@android:color/white"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:paddingTop="4dp"
-            tools:text="India won the worldcup,Report."/>
+            android:paddingTop="4dp" />
 
     </RelativeLayout>
 
     <TextView
         android:id="@+id/trailText"
         android:layout_width="match_parent"
-        android:background="#303030"
+        android:background="@color/background"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:elegantTextHeight="true"
@@ -56,61 +55,55 @@
         android:paddingBottom="4dp"
         android:paddingTop="4dp"
         android:textSize="14sp"
-        android:textColor="#B2FFFFFF"
-        tools:text="India defeated Australia by 4 wickets to win the workdcup, Report."/>
+        android:textColor="#B2FFFFFF" />
 
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        
-        <TextView
+
+        <ImageView
             android:id="@+id/publication"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:background="#303030"
-            android:paddingLeft="8dp"
-            android:fontFamily="sans-serif"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
             android:layout_weight="1"
-            android:elegantTextHeight="true"
-            android:textSize="12sp"
-            android:textColor="@color/colorPrimary"
-            tools:text="Theguardian"/>
+            android:paddingRight="8dp"
+            android:background="@color/background"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"/>
 
         <TextView
             android:id="@+id/tone"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:fontFamily="sans-serif"
-            android:background="#303030"
-            android:paddingLeft="8dp"
+            android:background="@color/background"
             android:elegantTextHeight="true"
-            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
             android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
             android:textSize="12sp"
-            tools:text="News"
-            android:textColor="@color/colorPrimary"
-            />
+            android:textStyle="bold"
+            tools:text="News" />
 
         <TextView
             android:id="@+id/date"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="left"
+            android:gravity="center"
             android:fontFamily="sans-serif"
             android:background="#303030"
             android:layout_weight="1"
             android:textSize="12sp"
             android:elegantTextHeight="true"
             android:paddingBottom="8dp"
-            tools:text="27/3/2017"
-            android:textColor="@color/colorPrimary"/>
-        
-        
+            android:textColor="@android:color/white"/>
+
     </LinearLayout>
 
 

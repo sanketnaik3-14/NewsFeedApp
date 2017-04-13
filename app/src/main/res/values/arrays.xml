@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_by_newest_label</item>
+        <item>@string/settings_order_by_relevance_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_by_newest_value</item>
+        <item>@string/settings_order_by_relevance_value</item>
+    </string-array>
+
+    <string-array name="settings_search_order_by_labels">
+        <item>@string/settings_search_order_by_relevance_label</item>
+        <item>@string/settings_search_order_by_newest_label</item>
+    </string-array>
+
+    <string-array name="settings_search_order_by_values">
+        <item>@string/settings_search_order_by_relevance_value</item>
+        <item>@string/settings_search_order_by_newest_value</item>
+    </string-array>
+
+
+    <string-array name="settings_sort_by_labels">
+        <item>@string/settings_sort_by_all_label</item>
+        <item>@string/settings_sort_by_news_label</item>
+        <item>@string/settings_sort_by_features_label</item>
+        <item>@string/settings_sort_by_blog_label</item>
+        <item>@string/settings_sort_by_reviews_label</item>
+        <item>@string/settings_sort_by_analysis_label</item>
+        <item>@string/settings_sort_by_letters_label</item>
+        <item>@string/settings_sort_by_obituaries_label</item>
+        <item>@string/settings_sort_by_comment_label</item>
+    </string-array>
+
+
+    <string-array name="settings_sort_by_values">
+        <item>@string/settings_sort_by_all_value</item>
+        <item>@string/settings_sort_by_news_value</item>
+        <item>@string/settings_sort_by_features_value</item>
+        <item>@string/settings_sort_by_blog_value</item>
+        <item>@string/settings_sort_by_reviews_value</item>
+        <item>@string/settings_sort_by_analysis_value</item>
+        <item>@string/settings_sort_by_letters_value</item>
+        <item>@string/settings_sort_by_obituaries_value</item>
+        <item>@string/settings_sort_by_comment_value</item>
+    </string-array>
+
+
+    <string-array name="settings_search_sort_by_labels">
+        <item>@string/settings_search_sort_by_all_label</item>
+        <item>@string/settings_search_sort_by_news_label</item>
+        <item>@string/settings_search_sort_by_features_label</item>
+        <item>@string/settings_search_sort_by_blog_label</item>
+        <item>@string/settings_search_sort_by_reviews_label</item>
+        <item>@string/settings_search_sort_by_analysis_label</item>
+        <item>@string/settings_search_sort_by_letters_label</item>
+        <item>@string/settings_search_sort_by_obituaries_label</item>
+        <item>@string/settings_search_sort_by_comment_label</item>
+    </string-array>
+
+
+    <string-array name="settings_search_sort_by_values">
+        <item>@string/settings_search_sort_by_all_value</item>
+        <item>@string/settings_search_sort_by_news_value</item>
+        <item>@string/settings_search_sort_by_features_value</item>
+        <item>@string/settings_search_sort_by_blog_value</item>
+        <item>@string/settings_search_sort_by_reviews_value</item>
+        <item>@string/settings_search_sort_by_analysis_value</item>
+        <item>@string/settings_search_sort_by_letters_value</item>
+        <item>@string/settings_search_sort_by_obituaries_value</item>
+        <item>@string/settings_search_sort_by_comment_value</item>
+    </string-array>
+
+</resources>

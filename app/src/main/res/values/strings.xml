@@ -3,11 +3,108 @@
 
     <string name="closeDrawer">Navigation View</string>
     <string name="openDrawer">Navigation View Closed</string>
+    <string name="nointernetconnection">No Internet Connection</string>
 
     <string name="technology">Technology</string>
     <string name="science">Science</string>
+    <string name="settings">Settings</string>
+    <string name="news">News</string>
+    <string name="search">Search</string>
+    <string name="newssettings">News Settings</string>
+    <string name="searchsettings">Search Settings</string>
+    <string name="orderbysettings">ORDER BY</string>
+    <string name="sortbysettings">SHOW CATEGORIES OF NEWS</string>
+    <string name="nomoredata">No more data</string>
+    <string name="nomoreinternet">No more internet connection</string>
 
-    <string name="all">All</string>
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_newest_value</string>
+
+    <string name="settings_search_order_by_label">Order By</string>
+    <string name="settings_search_order_by_key" translatable="false">order_by_one</string>
+    <string name="settings_search_order_by_default" translatable="false">@string/settings_search_order_by_relevance_value</string>
+
+
+    <string name="settings_order_by_newest_label">Newest</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+
+    <string name="settings_order_by_relevance_label">Relevance</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+
+    <string name="settings_search_order_by_newest_label">Newest</string>
+    <string name="settings_search_order_by_newest_value" translatable="false">newest</string>
+
+    <string name="settings_search_order_by_relevance_label">Relevance</string>
+    <string name="settings_search_order_by_relevance_value" translatable="false">relevance</string>
+
+
+    <string name="settings_sort_by_label">Sort By</string>
+    <string name="settings_sort_by_key" translatable="false">sort_by</string>
+    <string name="settings_sort_by_default" translatable="false">@string/settings_sort_by_all_value</string>
+
+    <string name="settings_search_sort_by_label">Sort By</string>
+    <string name="settings_search_sort_by_key" translatable="false">sort_by_one</string>
+    <string name="settings_search_sort_by_default" translatable="false">@string/settings_search_sort_by_all_value</string>
+
+
+    <string name="settings_sort_by_all_label">All</string>
+    <string name="settings_sort_by_all_value">all</string>
+
+    <string name="settings_sort_by_news_label">News</string>
+    <string name="settings_sort_by_news_value">news</string>
+
+    <string name="settings_sort_by_features_label">Features</string>
+    <string name="settings_sort_by_features_value">features</string>
+
+    <string name="settings_sort_by_blog_label">Blogs</string>
+    <string name="settings_sort_by_blog_value">blog</string>
+
+    <string name="settings_sort_by_reviews_label">Reviews</string>
+    <string name="settings_sort_by_reviews_value">reviews</string>
+
+    <string name="settings_sort_by_analysis_label">Analysis</string>
+    <string name="settings_sort_by_analysis_value">analysis</string>
+
+    <string name="settings_sort_by_letters_label">Letters</string>
+    <string name="settings_sort_by_letters_value">letters</string>
+
+    <string name="settings_sort_by_obituaries_label">Obituaries</string>
+    <string name="settings_sort_by_obituaries_value">obituaries</string>
+
+    <string name="settings_sort_by_comment_label">Comment</string>
+    <string name="settings_sort_by_comment_value">comment</string>
+
+
+    <string name="settings_search_sort_by_all_label">All</string>
+    <string name="settings_search_sort_by_all_value">all</string>
+
+    <string name="settings_search_sort_by_news_label">News</string>
+    <string name="settings_search_sort_by_news_value">news</string>
+
+    <string name="settings_search_sort_by_features_label">Features</string>
+    <string name="settings_search_sort_by_features_value">features</string>
+
+    <string name="settings_search_sort_by_blog_label">Blogs</string>
+    <string name="settings_search_sort_by_blog_value">blog</string>
+
+    <string name="settings_search_sort_by_reviews_label">Reviews</string>
+    <string name="settings_search_sort_by_reviews_value">reviews</string>
+
+    <string name="settings_search_sort_by_analysis_label">Analysis</string>
+    <string name="settings_search_sort_by_analysis_value">analysis</string>
+
+    <string name="settings_search_sort_by_letters_label">Letters</string>
+    <string name="settings_search_sort_by_letters_value">letters</string>
+
+    <string name="settings_search_sort_by_obituaries_label">Obituaries</string>
+    <string name="settings_search_sort_by_obituaries_value">obituaries</string>
+
+    <string name="settings_search_sort_by_comment_label">Comment</string>
+    <string name="settings_search_sort_by_comment_value">comment</string>
+
+    <string name="allscience">All Science</string>
     <string name="aeronautics">Aeronautics</string>
     <string name="agriculture">Agriculture</string>
     <string name="anthropology">Anthropology</string>
@@ -36,7 +133,47 @@
     <string name="weaponstechnology">Weapons Tech</string>
     <string name="zoology">Zoology</string>
 
-    <string name="technologyall">All Technology</string>
-    <string name="mobiles">Mobiles</string>
+
+    <string name="alltechnology">All Technology</string>
+    <string name="threedprinting">3d-Printing</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="amazon">Amazon</string>
+    <string name="android">Android</string>
+    <string name="apple">Apple</string>
+    <string name="apps">Apps</string>
+    <string name="arfiticialintelligence">Arfiticial Intelligence</string>
+    <string name="augmentedreality">Augmented Reality</string>
+    <string name="bigdata">Big Data</string>
+    <string name="billgates">Bill Gates</string>
+    <string name="ces">CES</string>
+    <string name="computing">Computing</string>
+    <string name="datasecurity">Data Security</string>
+    <string name="drones">Drones</string>
+    <string name="fintech">E-Finance</string>
+    <string name="elonmusk">Elon Musk</string>
+    <string name="engineering">Engineering</string>
+    <string name="facebook">Facebook</string>
+    <string name="gadgets">Gadgets</string>
+    <string name="google">Google</string>
+    <string name="ibm">IBM</string>
+    <string name="intel">Intel</string>
+    <string name="internet">Internet</string>
+    <string name="iot">Internet of Things</string>
+    <string name="jeffbezos">Jeff Bezos</string>
+    <string name="kickstarter">Kickstarter</string>
     <string name="laptops">Laptops</string>
+    <string name="microsoft">Microsoft</string>
+    <string name="mobilephones">Mobile Phones</string>
+    <string name="mwc">Mobile World Congress</string>
+    <string name="motoring">Cars and Bikes</string>
+    <string name="photography">Photography</string>
+    <string name="programming">Programming</string>
+    <string name="research">Research</string>
+    <string name="robots">Robots</string>
+    <string name="samsung">Samsung</string>
+    <string name="siliconvalley">Silicon Valley</string>
+    <string name="software">Software</string>
+    <string name="startups">Startups</string>
+    
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

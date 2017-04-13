@@ -4,7 +4,6 @@
     <color name="colorPrimaryDark">#689F38</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="techColoPrimary">#CDDC39</color>
-    <color name="techColorPrimaryDark">#AFB42B</color>
-    <color name="techColorAccent">#FF4081</color>
+    <color name="background">#303030</color>
+    <color name="whitedivider">#1EFFFFFF</color>
 </resources>

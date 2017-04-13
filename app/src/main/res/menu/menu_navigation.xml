@@ -14,6 +14,9 @@
             android:id="@+id/sci"
             android:title="@string/science"
             app:actionLayout="@layout/science_switch" />
+        <item
+            android:id="@+id/settings"
+            android:title="@string/settings"/>
     </group>
 
     <group android:id="@+id/temp1"
@@ -133,15 +136,165 @@
                     android:id="@+id/temp3"
                     android:checkableBehavior="single">
                     <item
-                        android:id="@+id/technologyall"
-                        android:title="@string/technologyall"/>
+                        android:id="@+id/alltechnology"
+                        android:title="@string/alltechnology"/>
 
-                <item
-                    android:id="@+id/mobiles"
-                    android:title="@string/mobiles" />
-                <item
-                    android:id="@+id/laptops"
-                    android:title="@string/laptops" />
+                    <item
+                    android:id="@+id/threedprinting"
+                    android:title="@string/threedprinting" />
+
+                    <item
+                    android:id="@+id/alphabet"
+                    android:title="@string/alphabet" />
+
+                    <item
+                        android:id="@+id/amazon"
+                        android:title="@string/amazon" />
+
+                    <item
+                        android:id="@+id/android"
+                        android:title="@string/android" />
+
+                    <item
+                        android:id="@+id/apple"
+                        android:title="@string/apple" />
+
+                    <item
+                        android:id="@+id/apps"
+                        android:title="@string/apps" />
+
+                    <item
+                        android:id="@+id/artificialintelligence"
+                        android:title="@string/arfiticialintelligence" />
+
+                    <item
+                        android:id="@+id/augmentedreality"
+                        android:title="@string/augmentedreality" />
+
+                    <item
+                        android:id="@+id/bigdata"
+                        android:title="@string/bigdata" />
+
+                    <item
+                        android:id="@+id/billgates"
+                        android:title="@string/billgates" />
+
+                    <item
+                        android:id="@+id/ces"
+                        android:title="@string/ces" />
+
+                    <item
+                        android:id="@+id/computing"
+                        android:title="@string/computing" />
+
+                    <item
+                        android:id="@+id/datasecurity"
+                        android:title="@string/datasecurity" />
+
+                    <item
+                        android:id="@+id/drones"
+                        android:title="@string/drones" />
+
+                    <item
+                        android:id="@+id/fintech"
+                        android:title="@string/fintech" />
+
+                    <item
+                        android:id="@+id/elonmusk"
+                        android:title="@string/elonmusk" />
+
+                    <item
+                        android:id="@+id/engineering"
+                        android:title="@string/engineering" />
+
+                    <item
+                        android:id="@+id/facebook"
+                        android:title="@string/facebook" />
+
+                    <item
+                        android:id="@+id/gadgets"
+                        android:title="@string/gadgets" />
+
+                    <item
+                        android:id="@+id/google"
+                        android:title="@string/google" />
+
+                    <item
+                        android:id="@+id/ibm"
+                        android:title="@string/ibm" />
+
+                    <item
+                        android:id="@+id/intel"
+                        android:title="@string/intel" />
+
+                    <item
+                        android:id="@+id/internet"
+                        android:title="@string/internet" />
+
+                    <item
+                        android:id="@+id/iot"
+                        android:title="@string/iot"/>
+
+                    <item
+                        android:id="@+id/jeffbezos"
+                        android:title="@string/jeffbezos"/>
+
+                    <item
+                        android:id="@+id/kickstarter"
+                        android:title="@string/kickstarter" />
+
+                    <item
+                        android:id="@+id/laptops"
+                        android:title="@string/laptops" />
+
+                    <item
+                        android:id="@+id/microsoft"
+                        android:title="@string/microsoft" />
+
+                    <item
+                        android:id="@+id/mobilephones"
+                        android:title="@string/mobilephones" />
+
+                    <item
+                        android:id="@+id/mwc"
+                        android:title="@string/mwc" />
+
+                    <item
+                        android:id="@+id/motoring"
+                        android:title="@string/motoring" />
+
+                    <item
+                        android:id="@+id/photography"
+                        android:title="@string/photography" />
+
+                    <item
+                        android:id="@+id/programming"
+                        android:title="@string/programming" />
+
+                    <item
+                        android:id="@+id/research"
+                        android:title="@string/research" />
+
+                    <item
+                        android:id="@+id/robots"
+                        android:title="@string/robots" />
+
+                    <item
+                        android:id="@+id/samsung"
+                        android:title="@string/samsung" />
+
+                    <item
+                        android:id="@+id/siliconvalley"
+                        android:title="@string/siliconvalley" />
+
+                    <item
+                        android:id="@+id/software"
+                        android:title="@string/software" />
+
+                    <item
+                        android:id="@+id/startups"
+                        android:title="@string/startups" />
+
                 </group>
             </menu>
         </item>
