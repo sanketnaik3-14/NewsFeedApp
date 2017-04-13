@@ -44,9 +44,6 @@ public class DetailsActivity extends AppCompatActivity implements Html.ImageGett
         String contri = "By, "+contributor;
         String body = i.getStringExtra("body");
 
-        byte[] byteArray = getIntent().getByteArrayExtra("image");
-        Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-
         TextView headline1 = (TextView)findViewById(R.id.headline1);
         TextView tone1 = (TextView)findViewById(R.id.tone1);
         TextView date1 = (TextView)findViewById(R.id.date1);
@@ -61,7 +58,19 @@ public class DetailsActivity extends AppCompatActivity implements Html.ImageGett
         Spanned spanned = Html.fromHtml(body,this, null);
         body1.setText(spanned);
         body1.setMovementMethod(LinkMovementMethod.getInstance());
-        
+
+        byte[] byteArray = getIntent().getByteArrayExtra("image");
+
+        if(byteArray == null)
+        {
+            newsimage.setImageResource(R.drawable.noimage);
+        }
+        else
+        {
+            Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            newsimage.setImageBitmap(bmp);
+        }
+
         if(contributor == null)
         {
             contributor1.setText("-");
@@ -69,15 +78,6 @@ public class DetailsActivity extends AppCompatActivity implements Html.ImageGett
         else
         {
             contributor1.setText(contri);
-        }
-
-        if(bmp == null)
-        {
-            newsimage.setImageResource(R.drawable.noimage);
-        }
-        else
-        {
-            newsimage.setImageBitmap(bmp);
         }
 
     }

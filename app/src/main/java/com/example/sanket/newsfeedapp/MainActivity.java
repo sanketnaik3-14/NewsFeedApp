@@ -104,9 +104,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 News news = (News)parent.getItemAtPosition(position);
 
                 Bitmap bmp = news.getmBitmap();
+                byte[] byteArray;
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
+                if(bmp!=null) {
+                    bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byteArray = stream.toByteArray();
+                }
+                else
+                {
+                    byteArray = null;
+                }
+
 
                 Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
                 intent.putExtra("head",news.getmHeadline());
