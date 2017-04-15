@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private TextView mEmptyStateTextView;
     public boolean refresh;
     public boolean loadMore = false;
+    public int index;
+    public View v;
+    public int top;
     View footer;
 
     @Override
@@ -140,6 +143,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
                             loadMore = true;
                             mSwipeRefreshLayout.setRefreshing(true);
+
+                        index = listView.getFirstVisiblePosition();
+                        v = listView.getChildAt(0);
+                        top = (v == null) ? 0 : v.getTop();
+
                             loaderManager.initLoader(x, null, MainActivity.this);
                     }
                 }
@@ -210,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         listView.setVisibility(View.GONE);
                         mSwipeRefreshLayout.setRefreshing(true);
                         loaderManager.initLoader(1,null,MainActivity.this);
+
                         x=1;
                         drawer.closeDrawers();
                         getSupportActionBar().setTitle(R.string.science);
@@ -308,6 +317,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     case R.id.foodscience:
                         listView.setVisibility(View.GONE);
                         mSwipeRefreshLayout.setRefreshing(true);
+
                         loaderManager.initLoader(12,null,MainActivity.this);
                         x=12;
                         drawer.closeDrawers();
@@ -398,6 +408,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     case R.id.nutrition:
                         listView.setVisibility(View.GONE);
                         mSwipeRefreshLayout.setRefreshing(true);
+                        loaderManager.getLoader(x).cancelLoad();
                         loaderManager.initLoader(22,null,MainActivity.this);
                         x=22;
                         drawer.closeDrawers();
@@ -650,6 +661,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     case R.id.ibm:
                         listView.setVisibility(View.GONE);
                         mSwipeRefreshLayout.setRefreshing(true);
+                        loaderManager.getLoader(x).cancelLoad();
                         loaderManager.initLoader(122,null,MainActivity.this);
                         x=122;
                         drawer.closeDrawers();
@@ -713,6 +725,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     case R.id.mobilephones:
                         listView.setVisibility(View.GONE);
                         mSwipeRefreshLayout.setRefreshing(true);
+                        loaderManager.getLoader(x).cancelLoad();
                         loaderManager.initLoader(129,null,MainActivity.this);
                         x=129;
                         drawer.closeDrawers();
@@ -1330,8 +1343,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
             if (data != null && !data.isEmpty()) {
 
-                mSwipeRefreshLayout.setRefreshing(false);
                 adapter.clear();
+                mSwipeRefreshLayout.setRefreshing(false);
                 adapter.addAll(data);
                 adapter.notifyDataSetChanged();
                 listView.setVisibility(View.VISIBLE);
@@ -1341,12 +1354,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 if (loadMore)
                 {
-                    listView.setSelection(load - 11);
+                    //listView.setSelection(load - 11);
+                    listView.setSelectionFromTop(index, top);
                     loadMore = false;
                 } else
                 {
                     listView.setSelection(0);
                 }
+
 
             }
         else
@@ -1385,6 +1400,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     {
         adapter.clear();
     }
+
+    
 
 
 }

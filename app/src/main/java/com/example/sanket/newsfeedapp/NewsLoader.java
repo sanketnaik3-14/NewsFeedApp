@@ -32,7 +32,7 @@ import java.util.List;
  * Created by sanket on 29/03/17.
  */
 
-public class NewsLoader extends AsyncTaskLoader<List<News>> {
+public class NewsLoader extends AsyncTaskLoader<List<News>>  {
 
 
     static boolean mConnect;

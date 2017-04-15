@@ -87,9 +87,16 @@ public class ScienceFragment extends Fragment implements LoaderManager.LoaderCal
                 News news = (News)parent.getItemAtPosition(position);
 
                 Bitmap bmp = news.getmBitmap();
+                byte[] byteArray;
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
+                if(bmp!=null) {
+                    bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byteArray = stream.toByteArray();
+                }
+                else
+                {
+                    byteArray = null;
+                }
 
                 Intent intent2 = new Intent(getActivity(),DetailsActivity.class);
                 intent2.putExtra("head",news.getmHeadline());
